@@ -1,0 +1,31 @@
+﻿@model List<Cizgi_School_Project.Models.TblTeacher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Öğretmen Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Branş</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TeacherID</td>
+            <td>@item.Name</td>
+            <td>@item.Surname</td>
+            <td>@item.Branch</td>
+            <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="#" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="#" class="btn btn-outline-primary">Yeni Öğretmen Girişi</a>

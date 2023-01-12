@@ -1,0 +1,33 @@
+﻿@model Cizgi_School_Project.Models.TblStudent
+@{
+    ViewBag.Title = "UpdateStudent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Öğrenci Güncelleme Sayfası</h2>
+
+<br />
+<form method="post">
+    <label>Öğrenci ID</label>
+    @Html.TextBoxFor(x => x.StudentID, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Soyadı</label>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Numarası</label>
+    @Html.TextBoxFor(x => x.Number, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Görsel</label>
+    @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Mail</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Öğrenci Telefon</label>
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-success">Güncelle</button>
+</form>
